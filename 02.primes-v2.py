@@ -21,7 +21,11 @@ def primes(n):
                 j += m
         i = i + 1
         m = 2 * i + 3
-    return [2] + [x for x in s if x]
+    l = [2]
+    for x in s:
+        if x:
+            l.append(x)
+    return l
 
 
 len(primes(100000))
